@@ -1,4 +1,4 @@
-import MainNavigation from "./Src/Navigation/Main Navigation";
+import { MainNavigation } from "./Src/Navigation/Main Navigation";
 
 
 function App(): React.JSX.Element {
