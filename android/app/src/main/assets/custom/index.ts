@@ -1,3 +1,3 @@
-export const Fonts={
+const Fonts={
     MetrophobicRegular:'Metrophobic-Regular',
 }
