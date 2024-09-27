@@ -1,0 +1,13 @@
+{
+  "migIndex": 1,
+  "data": [
+    {
+      "path": "src/Assets/Fonts/index.ts",
+      "sha1": "1f75981147195a2af46da5bd646357b6cda3a73f"
+    },
+    {
+      "path": "src/Assets/Fonts/Metrophobic-Regular.ttf",
+      "sha1": "8ee1a9428a57a39bdaa02f8d41bb4e569feeedc5"
+    }
+  ]
+}
