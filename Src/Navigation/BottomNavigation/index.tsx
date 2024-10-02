@@ -3,6 +3,7 @@ import HomeScreen from '../../Screens/HomeScreen';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import CategoriesScreen from '../../Screens/CategoriesScreen';
 import CartScreen from '../../Screens/CartScreen';
+import ProductScreen from '../../Screens/ProductsScreen';
 
 
 const Tab = createBottomTabNavigator();
@@ -65,6 +66,8 @@ export function BottomTabNavigation() {
           tabBarLabel: 'Cart',
         }}
       />
+      
+
     </Tab.Navigator>
   );
 }

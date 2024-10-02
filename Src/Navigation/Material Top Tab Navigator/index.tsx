@@ -12,7 +12,7 @@ export function TopTabs() {
       initialRouteName= "WomenScreen"
       screenOptions={{
         tabBarActiveTintColor: 'red',
-        tabBarLabelStyle: {fontSize: 12},
+        tabBarLabelStyle: {fontSize: 16},
         tabBarStyle: {backgroundColor: 'white'},
       }}>
 {/* 

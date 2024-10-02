@@ -7,7 +7,6 @@ import {BottomTabNavigation} from '../BottomNavigation';
 import WomenScreen from '../../Screens/WomenScreen';
 import MenScreen from '../../Screens/MenScreen';
 import KidsScreen from '../../Screens/KidsScreen';
-import {MyTabs} from '../Material Top Tab Navigator';
 import CategoriesScreen from '../../Screens/CategoriesScreen';
 
 const Stack = createNativeStackNavigator();
@@ -25,7 +24,7 @@ export const MainNavigation = () => {
         <Stack.Screen
           name="Details"
           component={DetailScreen}
-          options={{headerShown: false}}
+          options={{headerShown: true}}
         />
         <Stack.Screen
           name="Payment"

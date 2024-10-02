@@ -23,6 +23,7 @@ const CategoriesScreen = ({ navigation }) => {
 
   return (
 
+
    <TopTabs/>
   );
 };
