@@ -5,7 +5,7 @@ import { Fonts } from '../../Assets/Fonts';
 export const styles = StyleSheet.create({
   Hearts: {
     width: '13%',
-    marginTop: 10,  
+    marginTop: 9,  
     backgroundColor: 'green',
   },
   Product: {

@@ -11,6 +11,12 @@ textAlign:"left",
 color:'black'
 
 },
+Amount:{
+fontSize:16,
+fontFamily:Fonts.MetrophobicRegular,
+color:'black',
+fontWeight:'bold'
+},
 
 
 

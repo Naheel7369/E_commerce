@@ -2,14 +2,14 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    height: '20%',
-    width: '98%',
+    height: 50,
+    width: 300,
     backgroundColor: 'red',
-    borderRadius: 36,
+    borderRadius: 22,
     alignSelf:'center',
     justifyContent: 'center', 
     alignItems: 'center', 
-    marginTop:'10%'
+    marginTop:'11%'
   },
   buttonText: {
     color: 'white', 

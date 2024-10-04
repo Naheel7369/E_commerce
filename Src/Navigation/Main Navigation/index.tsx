@@ -8,19 +8,20 @@ import WomenScreen from '../../Screens/WomenScreen';
 import MenScreen from '../../Screens/MenScreen';
 import KidsScreen from '../../Screens/KidsScreen';
 import CategoriesScreen from '../../Screens/CategoriesScreen';
+import {AuthNavigation} from '../AuthNavigation';
+import Login from '../../Screens/Login Screen';
 
 const Stack = createNativeStackNavigator();
 
 export const MainNavigation = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator >
+      <Stack.Navigator>
         <Stack.Screen
-          name="Home"
-          component={BottomTabNavigation}
+          name="Logins"
+          component={AuthNavigation}
           options={{headerShown: false}}
         />
-
         <Stack.Screen
           name="Details"
           component={DetailScreen}
@@ -36,9 +37,12 @@ export const MainNavigation = () => {
           component={ProductScreen}
           options={{headerShown: false}}
         />
-        
+        {/* <Stack.Screen
+            name="AuthNavigation"
+            component={AuthNavigation}
+            options={{headerShown: false}}
+          /> */}
       </Stack.Navigator>
-      
     </NavigationContainer>
   );
 };

@@ -2,12 +2,12 @@ import { image } from "../Assets/Images";
 
  
  export const data=[
-    { id: '1', source: image.product1, title: 'Evening Dress', price: '12$' },
-    { id: '2', source: image.product2, title: 'Sport Dress', price: '19$' },
-    { id: '3', source: image.product1, title: 'Evening Dress', price: '12$' },
-    { id: '4', source: image.product2, title: 'Sport Dress', price: '19$' },
-    { id: '5', source: image.product1, title: 'Evening Dress', price: '12$' },
-    { id: '6', source: image.product2, title: 'Sport Dress', price: '19$' },
+    { id: '1', source: image.shortdress, title: 'Evening Dress', price: '12$'  },
+    { id: '2', source: image.shortdress, title: 'Sport Dress', price: '19$'},
+    { id: '3', source: image.shortdress, title: 'Evening Dress', price: '12$' },
+    { id: '4', source: image.shortdress, title: 'Sport Dress', price: '19$', },
+    { id: '5', source: image.shortdress, title: 'Evening Dress', price: '12$' },
+    { id: '6', source: image.shortdress, title: 'Sport Dress', price: '19$'},
 
 
 
@@ -25,4 +25,12 @@ import { image } from "../Assets/Images";
   { label: 'Red', value: 'Red' },
   { label: 'black', value: 'Black' },
   { label: 'White', value: 'White' },
+];
+
+export  const categories = [
+{ id: '1', title: 'SUMMER SALE', subtitle: 'Up to 50% off', isSale: true },
+{ id: '2', title: 'New', source: image.jacket },
+{ id: '3', title: 'Clothes', source: image.jeans },
+{ id: '4', title: 'Shoes', source: image.shoes },
+{ id: '5', title: 'Accessories', source: image.nackles },
 ];
