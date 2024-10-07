@@ -27,10 +27,11 @@ import { image } from "../Assets/Images";
   { label: 'White', value: 'White' },
 ];
 
-export  const categories = [
-{ id: '1', title: 'SUMMER SALE', subtitle: 'Up to 50% off', isSale: true },
-{ id: '2', title: 'New', source: image.jacket },
-{ id: '3', title: 'Clothes', source: image.jeans },
-{ id: '4', title: 'Shoes', source: image.shoes },
-{ id: '5', title: 'Accessories', source: image.nackles },
-];
+// export  const Categories = [
+// { id: '1', title: 'SUMMER SALE', subtitle: 'Up to 50% off', isSale: true },
+// { id: '2', title: 'New', source: image.jacket },
+// { id: '3', title: 'Clothes', source: image.jeans },
+// { id: '4', title: 'Shoes', source: image.shoes },
+// { id: '5', title: 'Accessories', source: image.nackles },
+// ];  
+

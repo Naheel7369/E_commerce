@@ -10,7 +10,7 @@ const CategoryCard = ({
   
 }: {
   Title: string;
-  source: ImageSourcePropType;
+  source?: ImageSourcePropType;
   
 }) => {
   return (
