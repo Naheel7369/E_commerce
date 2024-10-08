@@ -46,21 +46,3 @@ export async function getStore() {
 }
 
 
-export async function getitems() {
-    const url = '/user/product/id';
-    const acessToken=await fetchToken();
-    
-    try {
-        const response = await axiosInstance.get(url, {
-            headers: {
-                Authorization: `Bearer ${acessToken}`, 
-            },
-        });
-        
-        console.log("Storeitem=",response.data);
-        return response.data; 
-    } catch (error) {
-        console.error('Error fetching data:', error.response ? error.response.data : error.message);
-        return null; 
-    }
-}

@@ -1,37 +1,34 @@
-
-import { StyleSheet } from 'react-native';
-import { Fonts } from '../../Assets/Fonts';
+import {StyleSheet} from 'react-native';
+import {Fonts} from '../../Assets/Fonts';
 
 export const styles = StyleSheet.create({
   Hearts: {
     width: '13%',
-    marginTop: 9,  
+    marginTop: 9,
     backgroundColor: 'green',
   },
   Product: {
-    marginTop: 10, 
+    marginTop: 10,
     backgroundColor: 'red',
-    
   },
 
   Conatiner: {
     flexDirection: 'row',
-    justifyContent: 'space-between', 
-    alignItems: 'center', 
-    padding: 10, 
-    margin:'4%',
-    backgroundColor:'red',
-},
-Txt: {
-    fontSize: 15, 
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: 10,
+    margin: '4%',
+    backgroundColor: 'red',
+  },
+  Txt: {
+    fontSize: 15,
     fontWeight: 'bold',
-    color:'black' ,
-    fontFamily:Fonts.MetrophobicRegular,
-
-},
-subs: {
-    fontSize: 14, 
-    color: 'gray', 
-},
-
+    color: 'black',
+    fontFamily: Fonts.MetrophobicRegular,
+  },
+  subs: {
+    fontSize: 14,
+    color: 'gray',
+  },
+  herat: {width: '14%', marginTop: 30},
 });

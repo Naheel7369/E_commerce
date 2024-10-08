@@ -41,9 +41,9 @@ const DetailScreen = ({navigation, route}: any) => {
       <View style={{flex: 1}}>
         <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
           <DetailsImage
-            source={item.source}
-            width={80}
-            height={700}
+            source={item.image ? {uri:item.image}:null}
+            width={490}
+            height={400}
             sources={item.source}
             widths={80}
             heights={60}></DetailsImage>
@@ -57,7 +57,7 @@ const DetailScreen = ({navigation, route}: any) => {
           }}>
           <Dropdown items={Sizes} text="Select an Size" />
           <Dropdown items={DressColors} text="Select a Color" />
-          <Image style={{width: '14%', marginTop: 30}} source={image.Heart} />
+          <Image style={styles.herat} source={image.Heart} />
         </View>
         <View style={{marginTop: '8%'}}>
           <ProductText

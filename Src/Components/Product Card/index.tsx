@@ -6,9 +6,9 @@ const ProductCard = ({
   Texts,
   stext,
 }: {
-  source: ImageSourcePropType;
+  source?: ImageSourcePropType;
   Texts: string;
-  stext: string;
+  stext: number;
 }) => {
   return (
     <View style={styles.card}>
@@ -17,7 +17,7 @@ const ProductCard = ({
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.mainText}>{Texts}</Text>
-        <Text style={styles.subText}>{stext}</Text>
+        <Text style={styles.subText}>${stext}</Text>
       </View>
     </View>
   );

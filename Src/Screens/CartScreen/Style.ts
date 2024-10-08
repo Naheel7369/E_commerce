@@ -18,7 +18,20 @@ color:'black',
 fontWeight:'bold'
 },
 
+First:{marginTop:'20%',
+     flex:1
+    },
 
+second:{flexDirection: 'row',
+     justifyContent: 'space-between', 
+     alignItems: 'center',
+      marginBottom: 20
+    },
+
+    checkout:{
+        flexDirection:'row', 
+        justifyContent: 'space-between'
+    },
 
 
 });

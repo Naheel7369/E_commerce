@@ -1,34 +1,57 @@
-import ProductIamge from '../../Components/Product Main Image';
+import ProductImage from '../../Components/Product Main Image';
 import {image} from '../../Assets/Images';
 import ProductText from '../../Components/Product Text';
 import {FlatList, ScrollView, Text, TouchableOpacity, View} from 'react-native';
 import ProductCard from '../../Components/Product Card';
-import {data} from '../../Utils/data';
 import {useNavigation} from '@react-navigation/native';
-import {Title} from 'react-native-paper';
+import {useEffect, useState} from 'react';
+import {getStore} from '../../Services';
 
 const ProductScreen = () => {
+  const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState([]);
+  let pro = products;
+  console.log("pro=====>",pro);
+  const proArray = pro.products;
+  console.log("proArray=====>",proArray);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await getStore();
+        setProducts(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
   const navigation = useNavigation();
-  // console.log(data,"data======>")
-  const renderItem = ({item}: {item: any}) => (
+
+  const renderItem = ({item}) => (
     <TouchableOpacity onPress={() => navigation.navigate('Details', {item})}>
-      <ProductCard source={item.source} Texts={item.title} stext={item.price} />
+      <ProductCard  source={item.image ? { uri: item.image } : null} Texts={item.title} stext={item.price} />
     </TouchableOpacity>
   );
+
+  if (loading) {
+    return <Text>Loading...</Text>;
+  }
+
   return (
     <>
-      <ProductIamge
-        source={image.street}
-        Something="Street Clothes"></ProductIamge>
+      <ProductImage source={image.street} Something="Street Clothes" />
       <ProductText
         Texts="Sale"
         SubText="View all"
-        SmallText="Super summer sale"></ProductText>
-
+        SmallText="Super summer sale"
+      />
       <FlatList
-        data={data}
+        data={proArray}
         renderItem={renderItem}
-        keyExtractor={item => item.id}
+        keyExtractor={(item, index) => `${index}`}
         numColumns={2}
         columnWrapperStyle={{justifyContent: 'space-between'}}
       />
