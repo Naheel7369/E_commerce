@@ -37,7 +37,7 @@ export function BottomTabNavigation() {
           tabBarIcon: ({color, size}) => {
             return <Ionicons name="home" color={color} size={size} />;
           },
-          tabBarLabel: 'Home',
+          tabBarLabel: 'Homes',
         }}
       />
      

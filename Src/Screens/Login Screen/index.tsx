@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Alert, Text, View} from 'react-native';
 import {TextInput} from 'react-native-paper';
 import {styles} from './Styles';
@@ -7,20 +7,23 @@ import {useDispatch} from 'react-redux';
 import {loggedin, loggedout} from '../../Redux/AuthSlice';
 import {fetchToken} from '../../Services';
 
-const Login = ({navigation}: any) => {
+const Log = ({navigation}: any) => {
   const dispatch = useDispatch();
-  const [email, setemail] = useState(''); 
-  const [password, setPassword] = useState(''); 
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(true);
+  const HomeHandler = async () => {
+    if (!email || !password) {
+      Alert.alert('Validation Error', 'Email and password are required.');
+      return;
+    }
 
-  const HomeHAndler = async () => {
-    const  token= await fetchToken();
-      console.log('Token=====>', token); 
-      
-      if (token) {
-        dispatch(loggedin( token )); 
-        navigation.navigate('Home');
-    } else {
-        Alert.alert('Login Failed', 'Invalid email or password.');
+    try {
+      const response = await fetchToken(email, password);
+      dispatch(loggedin({user: response.data.data.user, token: response.data.data.token}));
+    } catch (error) {
+      console.error('Error logging in:', error);
+      Alert.alert('Error', 'An error occurred during login.');
     }
   };
 
@@ -33,32 +36,29 @@ const Login = ({navigation}: any) => {
         <TextInput
           label="Email"
           mode="outlined"
-          //   textColor="Red"
-          keyboardType="default"
+          keyboardType="email-address"
           placeholder="Email"
           outlineColor="red"
           activeOutlineColor="grey"
           cursorColor="grey"
           value={email}
-          onChangeText={setemail}
+          onChangeText={setEmail}
         />
-
         <TextInput
           label="Password"
           mode="outlined"
           secureTextEntry
           placeholder="Enter your password"
           outlineColor="red"
-          keyboardType="default"
           activeOutlineColor="grey"
           cursorColor="grey"
           value={password}
           onChangeText={setPassword}
         />
       </View>
-      <Buttons Custom="Login" onPress={HomeHAndler} />
+      <Buttons Custom="Login" onPress={HomeHandler} />
     </View>
   );
 };
 
-export default Login;
+export default Log;
