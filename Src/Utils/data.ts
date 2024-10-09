@@ -1,18 +1,18 @@
 import { image } from "../Assets/Images";
 
  
- export const data=[
-    { id: '1', source: image.shortdress, title: 'Evening Dress', price: '12$'  },
-    { id: '2', source: image.shortdress, title: 'Sport Dress', price: '19$'},
-    { id: '3', source: image.shortdress, title: 'Evening Dress', price: '12$' },
-    { id: '4', source: image.shortdress, title: 'Sport Dress', price: '19$', },
-    { id: '5', source: image.shortdress, title: 'Evening Dress', price: '12$' },
-    { id: '6', source: image.shortdress, title: 'Sport Dress', price: '19$'},
+//  export const data=[
+//     { id: '1', source: image.shortdress, title: 'Evening Dress', price: '12$'  },
+//     { id: '2', source: image.shortdress, title: 'Sport Dress', price: '19$'},
+//     { id: '3', source: image.shortdress, title: 'Evening Dress', price: '12$' },
+//     { id: '4', source: image.shortdress, title: 'Sport Dress', price: '19$', },
+//     { id: '5', source: image.shortdress, title: 'Evening Dress', price: '12$' },
+//     { id: '6', source: image.shortdress, title: 'Sport Dress', price: '19$'},
 
 
 
 
- ]
+
 
 
  export const Sizes = [

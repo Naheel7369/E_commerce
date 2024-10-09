@@ -8,7 +8,6 @@ import {useEffect, useState} from 'react';
 import {getStore} from '../../Services';
 
 const ProductScreen = () => {
-  const [loading, setLoading] = useState(true);
   const [products, setProducts] = useState([]);
   let pro = products;
   console.log("pro=====>",pro);
@@ -21,8 +20,6 @@ const ProductScreen = () => {
         setProducts(data);
       } catch (error) {
         console.error('Error fetching data:', error);
-      } finally {
-        setLoading(false);
       }
     };
     fetchData();
@@ -35,11 +32,6 @@ const ProductScreen = () => {
       <ProductCard  source={item.image ? { uri: item.image } : null} Texts={item.title} stext={item.price} />
     </TouchableOpacity>
   );
-
-  if (loading) {
-    return <Text>Loading...</Text>;
-  }
-
   return (
     <>
       <ProductImage source={image.street} Something="Street Clothes" />
